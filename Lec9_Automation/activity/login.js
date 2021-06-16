@@ -37,6 +37,22 @@ browserOpenPromise.then(function (browserInstance) {
   .then(function(){
       console.log("login succesfull !");
   })
+  .then(function(){
+      let wait= tab.waitForSelector('#base-card-1-link',{visible:true});
+      return wait;
+  })
+  .then(function(){
+      let interview=tab.click('#base-card-1-link');
+      return interview;
+  })
+  .then(function(){
+      let warm=tab.waitForSelector('#base-card-1-link');
+      return warm;
+  })
+  .then (function(){
+      let result=tab.click('#base-card-1-link');
+      return result;
+  })
   .catch(function(err){
       console.log("Inside catch");
       console.log(err);
