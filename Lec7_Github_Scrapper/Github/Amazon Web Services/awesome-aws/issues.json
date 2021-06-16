@@ -1,0 +1,30 @@
+[
+  {
+    "issueName": "This list is a graveyard",
+    "issueLink": "https://www.github.com/donnemartin/awesome-aws/issues/215"
+  },
+  {
+    "issueName": "Niche Guides",
+    "issueLink": "https://www.github.com/donnemartin/awesome-aws/issues/141"
+  },
+  {
+    "issueName": "Possible blank template?",
+    "issueLink": "https://www.github.com/donnemartin/awesome-aws/issues/102"
+  },
+  {
+    "issueName": "Last Week in AWS newsletters",
+    "issueLink": "https://www.github.com/donnemartin/awesome-aws/issues/98"
+  },
+  {
+    "issueName": "Watch list",
+    "issueLink": "https://www.github.com/donnemartin/awesome-aws/issues/34"
+  },
+  {
+    "issueName": "Validate pull requests with Travis",
+    "issueLink": "https://www.github.com/donnemartin/awesome-aws/issues/31"
+  },
+  { "issueName": "", "issueLink": "https://www.github.comundefined" },
+  { "issueName": "", "issueLink": "https://www.github.comundefined" },
+  { "issueName": "", "issueLink": "https://www.github.comundefined" },
+  { "issueName": "", "issueLink": "https://www.github.comundefined" }
+]

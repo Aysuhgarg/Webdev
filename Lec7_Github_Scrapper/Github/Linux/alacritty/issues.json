@@ -1,0 +1,42 @@
+[
+  {
+    "issueName": "Alacritty crashes at first start.",
+    "issueLink": "https://www.github.com/alacritty/alacritty/issues/5237"
+  },
+  {
+    "issueName": "Alacritty: Runtime Error; panicked at 'assertion failed: hr == 0'",
+    "issueLink": "https://www.github.com/alacritty/alacritty/issues/5230"
+  },
+  {
+    "issueName": "Delete Key Does not work, instead it creates a space",
+    "issueLink": "https://www.github.com/alacritty/alacritty/issues/5226"
+  },
+  {
+    "issueName": "Font size become small when re-connect display, but recovered after resizing window",
+    "issueLink": "https://www.github.com/alacritty/alacritty/issues/5213"
+  },
+  {
+    "issueName": "Zooming in Gomuks when a image is displayed crashes Alacritty?",
+    "issueLink": "https://www.github.com/alacritty/alacritty/issues/5203"
+  },
+  {
+    "issueName": "Alacritty crashed on macos",
+    "issueLink": "https://www.github.com/alacritty/alacritty/issues/5197"
+  },
+  {
+    "issueName": "Alacrity Blank White Screen & Not Responding",
+    "issueLink": "https://www.github.com/alacritty/alacritty/issues/5182"
+  },
+  {
+    "issueName": "Alacritty freeze",
+    "issueLink": "https://www.github.com/alacritty/alacritty/issues/5174"
+  },
+  {
+    "issueName": "Allow specifying a mode for hint bindings",
+    "issueLink": "https://www.github.com/alacritty/alacritty/issues/5154"
+  },
+  {
+    "issueName": "alacritty sometimes doesn't react to input until the next input event",
+    "issueLink": "https://www.github.com/alacritty/alacritty/issues/5116"
+  }
+]

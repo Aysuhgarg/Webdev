@@ -1,0 +1,42 @@
+[
+  {
+    "issueName": "Aliases: 'f' is not recognized as an internal or external command",
+    "issueLink": "https://www.github.com/aws/aws-cli/issues/6223"
+  },
+  {
+    "issueName": "modify-transit-gateway --options AddTransitGatewayCidrBlocks - not working #6151",
+    "issueLink": "https://www.github.com/aws/aws-cli/issues/6222"
+  },
+  {
+    "issueName": "enable-image-deprecation missing from Docker and CLI",
+    "issueLink": "https://www.github.com/aws/aws-cli/issues/6221"
+  },
+  {
+    "issueName": "RDS Postgres modify-db-parameter-group",
+    "issueLink": "https://www.github.com/aws/aws-cli/issues/6219"
+  },
+  {
+    "issueName": "ssm start-session with -profile doens't ask for MFA",
+    "issueLink": "https://www.github.com/aws/aws-cli/issues/6218"
+  },
+  {
+    "issueName": "S3 cp to copy files to local uses high memory if number of files in million",
+    "issueLink": "https://www.github.com/aws/aws-cli/issues/6215"
+  },
+  {
+    "issueName": "aws sso login does not complete",
+    "issueLink": "https://www.github.com/aws/aws-cli/issues/6212"
+  },
+  {
+    "issueName": "aws sync re-download files with spaces in their name",
+    "issueLink": "https://www.github.com/aws/aws-cli/issues/6211"
+  },
+  {
+    "issueName": "Add maven support for aws codeartifact login command?",
+    "issueLink": "https://www.github.com/aws/aws-cli/issues/6207"
+  },
+  {
+    "issueName": "aws lambda invoke --log-type parameter unimplemented",
+    "issueLink": "https://www.github.com/aws/aws-cli/issues/6204"
+  }
+]
