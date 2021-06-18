@@ -119,6 +119,7 @@ function solveQuestion(quesLink){
             for(let i=0; i<solutions.length ; i++){
                 if(solutions[i].name == quesName){
                     code = solutions[i].sol;
+                    break;
                 }
             }
             let waitAndClickPromise = waitAndClick('.checkbox-input');
