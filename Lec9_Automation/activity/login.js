@@ -2,7 +2,7 @@ const puppeteer = require("puppeteer");
 const id ="josir55051@0ranges.com";
 const pw = "123456789";
 
-let solutions = require("./solutions");
+let solutions = require("./solution");
 let code;
 let tab;
 // puppeteer functions => promisifed functions
@@ -13,7 +13,7 @@ let browserOpenPromise = puppeteer.launch({
   headless: false,
   defaultViewport: null,
   args: ["--start-maximized"],
-  executablePath: "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+  //executablePath: "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
 });
 
 browserOpenPromise
