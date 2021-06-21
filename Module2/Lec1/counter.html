@@ -10,8 +10,25 @@
     <h1>+</h1>
     <p>0</p>
     <h2>-</h2>
-
+    <button id="inc">+</button>
+    <p id=res>0</p>
+    <button id="dec">-</button>
     <script>
+        let val=0;
+
+        let incbt=document.querySelector("#inc");
+        let decbt=document.querySelector("#dec");
+        let p=document.querySelector("#res");
+        incbt.addEventListener("click",function(){
+            val++;
+            p.innerText=val;
+        });
+
+        decbt.addEventListener("click",function(){
+            val--;
+            p.innerText=val;
+        });
+
         let c=0;
         let h1tag=document.querySelector("h1");
         h1tag.addEventListener("click",function(){
