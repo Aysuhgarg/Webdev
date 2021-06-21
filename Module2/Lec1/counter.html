@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>+</h1>
+    <p>0</p>
+    <h2>-</h2>
+
+    <script>
+        let c=0;
+        let h1tag=document.querySelector("h1");
+        h1tag.addEventListener("click",function(){
+            c++;
+            let ptag=document.querySelector("p");
+            ptag.innerText=c;
+           // console.log(c);
+        });
+
+        let h2tag=document.querySelector("h2");
+        h2tag.addEventListener("click",function(){
+            c--;
+            let ptag=document.querySelector("p");
+           ptag.innerText=c;
+            //console.log(c);
+        })
+
+       
+    </script>
+</body>
+</html>
