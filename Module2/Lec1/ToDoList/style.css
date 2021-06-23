@@ -1,26 +1,61 @@
 * {
     box-sizing: border-box;
+    
   }
   
   body {
-    background-color: #273c75;
+    background-color:lightblue;
   }
   
   input {
-    width: 400px;
+    /* width: 400px;
     height: 50px;
     font-size: 20px;
+    border-radius: 10px; */
+    
+    height: 70%;
+    width: 60%;
+    padding: 10px;
+    outline: none;
+    border: 0px;
+    border-radius: 20px;
+    font-size: 20px;
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+    /* color: thistle; */
+    background-color: white;
   }
   
   button {
     height: 50px;
     width: 100px;
     font-size: 20px;
+    border-radius: 10px;
+    border: 5px solid cornflowerblue;
+    background-color: white;
+    font-weight: bold;
   }
   
   li {
     font-family: "Raleway", sans-serif;
-    color: white;
+    color:black;
     list-style: none;
     font-size: 30px;
+    
+  }
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+    -shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+    /* padding: 16px; */
+    text-align: center;
+    /* background-color: white;*/ 
+    width: 60%;
+    margin: auto;
+    margin-top: 40px;
+    /* background-color: #58B19F; */
+    border-radius: 15px;
+    padding: 10px;
+    /* text-align: center;
+    
   }
