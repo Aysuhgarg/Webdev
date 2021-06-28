@@ -35,7 +35,12 @@
         allp[i].addEventListener("click",function(e)
         {
           console.log(e);
-          
+          if(e.detail==1)
+          e.currentTarget.style.backgroundColor="red";
+          else if(e.detail==2)
+          e.currentTarget.style.backgroundColor="blue";
+          else if(e.detail==3)
+          e.currentTarget.style.backgroundColor="green";
         });
       }
       
