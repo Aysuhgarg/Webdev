@@ -157,10 +157,10 @@ body{
   }
   
   .modal-priority:hover {
-    border: 5px solid white;
+    border: 5px solid #7f8c8d;
   }
   
   .selected {
-    border: 10px solid white;
+    border: 5px solid #7f8c8d;
     
   }
