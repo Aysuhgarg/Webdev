@@ -32,9 +32,14 @@
     <script>
       //Q The following code is broken. Even when clicked on yellow, its alerted that red is clicked. Fix it
       let red = document.querySelector(".red");
-
+      let yell = document.querySelector(".yellow");
       red.addEventListener("click", function () {
         alert("red was clicked");
+      });
+
+      yell.addEventListener("click", function (e) {
+        alert("yellow was clicked");
+        e.stopPropagation(); //bubble mt kro
       });
 
      
