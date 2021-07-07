@@ -17,7 +17,7 @@ body{
 .grid{
     height:85vh;
     width:100vw;
-    background-color: lightblue
+    background-color: white;
 }
 .filters{
     width:16rem;
