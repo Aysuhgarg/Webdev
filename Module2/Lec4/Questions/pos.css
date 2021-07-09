@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container{
+      height:10rem;
+      width:10rem;
+     
+  }
+  .rec1{
+      height:5rem;
+      width: 5rem;
+      background-color: red;
+  }
+  .rec2{
+    height:5rem;
+    width: 5rem;
+    background-color:aquamarine;
+    position:fixed;
+    top:2.5rem;
+    left:2.5rem;
+}
+.rec3{
+    height:5rem;
+    width: 5rem;
+    background-color: blue;
+    position:fixed;
+    top:5rem;
+    left:5rem;
+}
