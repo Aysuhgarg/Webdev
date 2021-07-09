@@ -67,6 +67,8 @@
     height: 30px;
     width: 30px;
     background-color: gray;
+    position: fixed;
+    z-index: 10;
   }
 .row-number-section{
     display: inline-block;
