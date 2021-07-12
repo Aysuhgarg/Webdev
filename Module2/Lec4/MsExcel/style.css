@@ -124,9 +124,12 @@
 .cell{
   height:30px;
     width:80px;
-   
+   outline:none;
     border: 1px solid;
     flex-shrink: 0;
+}
+.cell-selected{
+  border: 2px solid rgb(60, 60, 218);
 }
 .row{
   display:flex;

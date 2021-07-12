@@ -1,5 +1,10 @@
 let row=document.querySelector(".row-number-section");
 let body=document.querySelector("container");
+
+let a3= document.querySelector(".selected-cell-div");
+
+let lastcell;
+
 for(let i=1;i<=100;i++)
 {
     let ndiv=document.createElement("div");
@@ -35,11 +40,28 @@ for(let i=1;i<=100;i++)
       let alphabet=String.fromCharCode(ascii);
       let celladdress=alphabet+i;
 
-      let cell =document.createElement("div");
+      let celldiv =document.createElement("div");
+      celldiv.classList.add("cell");
+      celldiv.contentEditable=true;
 
-      cell.classList.add("cell");
-      cell.setAttribute("data-address",celladdress);
-      rowDiv.append(cell);
+      celldiv.setAttribute("data-address",celladdress);
+
+      celldiv.addEventListener("click",function(e)
+      {
+          if(lastcell)
+          {
+              lastcell.classList.remove("cell-selected");
+          }
+
+          e.currentTarget.classList.add("cell-selected");
+          lastcell =e.currentTarget;
+
+         let data= e.currentTarget.getAttribute("data-address");
+          a3.innerText=data;
+      });
+      
+
+      rowDiv.append(celldiv);
 
     }
     cellsection.append(rowDiv);
