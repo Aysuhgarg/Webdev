@@ -2,8 +2,17 @@ let row=document.querySelector(".row-number-section");
 let body=document.querySelector("container");
 
 let a3= document.querySelector(".selected-cell-div");
+let column=document.querySelector(".column-tag-section");
+let cellsection=document.querySelector(".cell-section");
+
 
 let lastcell;
+
+cellsection.addEventListener("scroll", function (e) {
+    row.style.transform = `translateY(-${e.currentTarget.scrollTop}px)`;
+  
+    column.style.transform = `translateX(-${e.currentTarget.scrollLeft}px)`;
+  });
 
 for(let i=1;i<=100;i++)
 {
@@ -15,7 +24,6 @@ for(let i=1;i<=100;i++)
 
 
 //counm section
-let column=document.querySelector(".column-tag-section");
 
 for(let i=0;i<26;i++)
 {
@@ -29,7 +37,6 @@ for(let i=0;i<26;i++)
     column.append(div);
 }
 
-let cellsection=document.querySelector(".cell-section");
 for(let i=1;i<=100;i++)
 {
     let rowDiv=document.createElement("div");

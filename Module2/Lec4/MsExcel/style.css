@@ -44,6 +44,7 @@
     display: flex;
     justify-content: center;
     border: 1px solid;
+    background-color: white;
     align-items: center;
   }
 .formula-section input {
@@ -79,6 +80,7 @@
     position: fixed;
     top:calc(20vh + 30px);
     left:0;
+    z-index: -10;
 }
 .row-number {
     height: 30px;
@@ -111,6 +113,7 @@
     display:flex;
     justify-content: center;
     align-items: center;
+    z-index: -10;
 }
 .cell-section{
   position:absolute;
