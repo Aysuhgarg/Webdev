@@ -127,6 +127,18 @@ for(let i=1;i<=100;i++)                              //Nested Loop for Creating 
 }
 
 
+dataobj["A1"].value = 20;
+dataobj["A1"].downstream = ["B1"];
+dataobj["B1"].formula = "2 * A1";
+dataobj["B1"].upstream = ["A1"];
+dataobj["B1"].value = 40;
+
+let a1cell = document.querySelector("[data-address='A1']")
+let b1cell = document.querySelector("[data-address='B1']")
+
+a1cell.innerText = 20
+b1cell.innerText = 40
+
 // C1 = Formula(2*A1)
 // A1 = parent
 // C1 = child
@@ -138,7 +150,7 @@ for(let i=1;i<=100;i++)                              //Nested Loop for Creating 
 function removeFromDownstream(parentCell, childCell) {
     //1- fetch parentCell's downstream
   
-    let parentDownstream = dataObj[parentCell].downstream;
+    let parentDownstream = dataobj[parentCell].downstream;
   
     //2- filter kro childCell ko parent ki downstream se
   
@@ -151,16 +163,16 @@ function removeFromDownstream(parentCell, childCell) {
     }
   
     //3- filtered upstream ko wapis save krwado dataObj me req cell me
-    dataObj[parentCell].downstream = filteredDownstream
+    dataobj[parentCell].downstream = filteredDownstream
   }
 
 
 
 
   function updateCell(cell){
-    let cellObj = dataObj[cell]
-    let upstream = cellObj.upstream // [(A1-20), B1-10]
-    let formula = cellObj.formula // A1 + B1
+    let cellobj = dataobj[cell]
+    let upstream = cellobj.upstream // [(A1-20), B1-10]
+    let formula = cellobj.formula // A1 + B1
   
     // upstream me jobhi cell hai unke objects me jaunga whase unki value lekr aunga 
     // wo sari values mai ek object me key value pair form me store krunga where key being the cell address 
@@ -171,23 +183,30 @@ function removeFromDownstream(parentCell, childCell) {
     //   B1:10
     // }
   
-    let valObj = {}
+    let valobj = {}
   
     for(let i = 0;i<upstream.length;i++){
   
-        let cellValue =  dataObj[upstream[i]].value
+        let cellValue =  dataobj[upstream[i]].value
   
-        valObj[upstream[i]] = cellValue
+        valobj[upstream[i]] = cellValue
     }
   
   //a1 + b1
   
-  for(let key in valObj){
-    formula = formula.replace(key,valObj[key])
+  for(let key in valobj){
+    formula = formula.replace(key,valobj[key])
   }
   
   //20 + 10
   
   let newValue = eval(formula)
   
+  dataobj[cell].value = newValue;
+
+  let downstream = cellobj.downstream;
+
+  for (let i = 0; i < downstream.length; i++) {
+    updateCell(downstream[i]);
+  }
   } 
