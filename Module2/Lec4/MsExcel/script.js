@@ -93,9 +93,10 @@ for(let i=1;i<=100;i++)                              //Nested Loop for Creating 
             updateCell(currdownstream[i]);
         }
 
-
+        //celldiv.innerText=dataobj[currCellAddress].value;
         //console.log(dataobj[currCellAddress]);
-        console.log(e.currentTarget.innerText);
+
+        //console.log(e.currentTarget.innerText);
       })
 
 
@@ -127,7 +128,7 @@ for(let i=1;i<=100;i++)                              //Nested Loop for Creating 
 }
 
 
-dataobj["A1"].value = 20;
+dataobj["A1"].value = 20;                                            //testing by fake data
 dataobj["A1"].downstream = ["B1"];
 dataobj["B1"].formula = "2 * A1";
 dataobj["B1"].upstream = ["A1"];
@@ -201,7 +202,7 @@ function removeFromDownstream(parentCell, childCell) {
   //20 + 10
   
   let newValue = eval(formula)
-  
+  //document.querySelector(`[data-address=]`${cell}`]`).innerText=newValue;
   dataobj[cell].value = newValue;
 
   let downstream = cellobj.downstream;
