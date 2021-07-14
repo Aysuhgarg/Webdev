@@ -1,6 +1,6 @@
 let row=document.querySelector(".row-number-section");
 let body=document.querySelector("container");
-
+let formulaInput = document.querySelector(".formula-input-section");
 let a3= document.querySelector(".selected-cell-div");
 let column=document.querySelector(".column-tag-section");
 let cellsection=document.querySelector(".cell-section");
@@ -8,7 +8,31 @@ let cellsection=document.querySelector(".cell-section");
 let dataobj={};                                               //global data object that store value,formula,upstrem,downstream
 let lastcell;
 
-
+formulaInput.addEventListener("keydown", function (e) {
+    if (e.key == "Enter") {
+      console.log("now evaluating formula");
+  
+      let typedFormula = e.currentTarget.value;
+      console.log(typedFormula);
+  
+      if (!lastCell) return;
+  
+      console.log("not returned");
+  
+      let selectedCellAdd = lastCell.getAttribute("data-address");
+      let cellObj = dataObj[selectedCellAdd];
+  
+      cellObj.formula = typedFormula;
+  
+      let upstream = cellObj.upstream;
+  
+      for (let k = 0; k < upstream.length; k++) {
+        removeFromDownstream(upstream[k], selectedCellAdd);
+      }
+  
+      currCellObj.upstream = [];
+    }
+  });
 
 cellsection.addEventListener("scroll", function (e) {                        //Scrolling 
     row.style.transform = `translateY(-${e.currentTarget.scrollTop}px)`;
@@ -202,7 +226,8 @@ function removeFromDownstream(parentCell, childCell) {
   //20 + 10
   
   let newValue = eval(formula)
-  //document.querySelector(`[data-address=]`${cell}`]`).innerText=newValue;
+  
+  document.querySelector(`[data-address='${cell}']`).innerText=newValue;
   dataobj[cell].value = newValue;
 
   let downstream = cellobj.downstream;
