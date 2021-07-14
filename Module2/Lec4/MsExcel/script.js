@@ -5,6 +5,7 @@ let a3= document.querySelector(".selected-cell-div");
 let column=document.querySelector(".column-tag-section");
 let cellsection=document.querySelector(".cell-section");
 
+let dataobj={};
 
 let lastcell;
 
@@ -37,6 +38,7 @@ for(let i=0;i<26;i++)
     column.append(div);
 }
 
+
 for(let i=1;i<=100;i++)
 {
     let rowDiv=document.createElement("div");
@@ -46,8 +48,26 @@ for(let i=1;i<=100;i++)
       let ascii=j+65;
       let alphabet=String.fromCharCode(ascii);
       let celladdress=alphabet+i;
+      
+      dataobj[celladdress]={
+          value:undefined,
+          formula:undefined,
+          downstream:[],
+          upstream:[]
+      }
 
       let celldiv =document.createElement("div");
+
+      celldiv.addEventListener("input",function(e){                    //cell pr type krne pr execute hoga
+       
+
+        let currCellAddress=e.currentTarget.getAttribute("data-address");
+
+        dataobj[currCellAddress].value=e.currentTarget.innerText;        // Updating the value in dataobj
+        //console.log(dataobj[currCellAddress]);
+        console.log(e.currentTarget.innerText);
+      })
+
       celldiv.classList.add("cell");
       celldiv.contentEditable=true;
 
@@ -71,5 +91,6 @@ for(let i=1;i<=100;i++)
       rowDiv.append(celldiv);
 
     }
+
     cellsection.append(rowDiv);
 }
