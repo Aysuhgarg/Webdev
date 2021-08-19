@@ -1,5 +1,5 @@
 let row=document.querySelector(".row-number-section");
-let body=document.querySelector("container");
+//let body=document.querySelector("container");
 let formulaInput = document.querySelector(".formula-input-section");
 let a3= document.querySelector(".selected-cell-div");
 let column=document.querySelector(".column-tag-section");
@@ -137,7 +137,10 @@ for(let i=1;i<=100;i++)                              //Nested Loop for Creating 
             value:undefined,
             formula:undefined,
             downstream:[],
-            upstream:[]
+            upstream:[],
+            align:"left",
+            color:"black",
+            bgColor:"White",
         }
 
       let celldiv =document.createElement("div");                      //cell created
@@ -300,3 +303,5 @@ function removeFromDownstream(parentCell, childCell) {
     dataobj[parent].downstream.push(child);
 
   }
+
+
