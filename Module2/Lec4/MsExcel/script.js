@@ -209,6 +209,16 @@ for(let i=1;i<=100;i++)                              //Nested Loop for Creating 
     cellsection.append(rowDiv);
 }
 
+if (localStorage.getItem("sheet")) {
+  console.log(1);
+  dataObj = JSON.parse(localStorage.getItem("sheet"));
+
+  for (let x in dataObj) {
+    let cell = document.querySelector(`[data-address='${x}']`);
+    if (dataObj[x].value) cell.innerText = dataObj[x].value;
+    // dataObj[x]
+  }
+}
 
 // dataobj["A1"].value = 20;                                            //testing by fake data
 // dataobj["A1"].downstream = ["B1"];
